@@ -1,49 +1,51 @@
 /* DialPad*/
-let inputPicked = document.getElementById('input-picked');
-let btns = document.getElementById("btns");
-let showPicked = document.getElementById("showPicked");
-let buttonNumbers = [
-  [1],
-  [2],
-  [3],
-  [4],
-  [5],
-  [6],
-  [7],
-  [8],
-  [9],
-  ["*"],
-  [0],
-  ["#"]
-];
-let picked = [];
-let deleteNums = document.getElementById("delete");
-let call = document.getElementById("call");
-let end = document.getElementById("end");
-
-buttonNumbers.forEach(numbers => {
-  btns.innerHTML += `
-    <button onclick="addNumbers(this.value)"
-    class="btn btn-light custom-button"
-    type="button"
-    value="${numbers[0]}">${numbers[0]}</button>`;
-});
-
-function addNumbers(numbers) {
-  picked.push(numbers);
-  numPicked = picked.toString().replace(/\,/g,'');
-  inputPicked.value = numPicked;
+function dialPad(){
+  let inputPicked = document.getElementById('input-picked');
+  let btns = document.getElementById("btns");
+  let showPicked = document.getElementById("showPicked");
+  let buttonNumbers = [
+    [1],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    ["*"],
+    [0],
+    ["#"]
+  ];
+  let picked = [];
+  let deleteNums = document.getElementById("delete");
+  let call = document.getElementById("call");
+  let end = document.getElementById("end");
+  
+  buttonNumbers.forEach(numbers => {
+    btns.innerHTML += `
+      <button onclick="addNumbers(this.value)"
+      class="btn btn-light custom-button"
+      type="button"
+      value="${numbers[0]}">${numbers[0]}</button>`;
+  });
+  
+  function addNumbers(numbers) {
+    picked.push(numbers);
+    numPicked = picked.toString().replace(/\,/g,'');
+    inputPicked.value = numPicked;
+  }
+  
+  deleteNums.addEventListener("click", () => {
+    picked.pop();
+    numPicked = picked.toString().replace(/\,/g,'');
+    inputPicked.value = numPicked;
+  });
 }
-
-deleteNums.addEventListener("click", () => {
-  picked.pop();
-  numPicked = picked.toString().replace(/\,/g,'');
-  inputPicked.value = numPicked;
-});
 
 
 $(document).ready(function() {
-
+  dialPad();
 //size condition
   if(window.innerWidth < 992){
     
