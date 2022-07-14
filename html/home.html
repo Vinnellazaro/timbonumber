@@ -152,11 +152,23 @@
                             <button type="button" class="list-group-item list-group-item-action">
                                 <div data-letters="AJ"> Angelina Jolly <br><span class="ms-5">Sample Message</span></div>
                             </button>
+                            <button type="button" class="list-group-item list-group-item-action">
+                                <div data-letters="AJ"> Angelina Jolly <br><span class="ms-5">Sample Message</span></div>
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">
+                                <div data-letters="AJ"> Angelina Jolly <br><span class="ms-5">Sample Message</span></div>
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">
+                                <div data-letters="AJ"> Angelina Jolly <br><span class="ms-5">Sample Message</span></div>
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">
+                                <div data-letters="AJ"> Angelina Jolly <br><span class="ms-5">Sample Message</span></div>
+                            </button>
                         </div>
                     </div>
                     <div class="col p-0 message-container">
                         <div class="card rounded-0">
-                            <div class="p-2">
+                            <div class="p-2 border-bottom">
                                 <div class="d-flex">
                                     <button class="btn message-back-btn"><i class="bi bi-chevron-left fs-5"></i></button>
                                     <div data-letters="AJ"> Angelina Jolly</div>
@@ -171,25 +183,25 @@
                             </div>
                             <div class="chat-container ms-3 me-3">
                                 <li>
-                                    <div class='chat-send d-flex flex-row'>
+                                    <div class='chat-send d-flex flex-row justify-content-center'>
                                         <div class="time-date-send lex-shrink-1">12:00pm 07/12/2022</div>
                                         <div class='box-sent triangle-sent'><span class='msg'>sample messagsesdsdssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</span></div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class='chat-receive d-flex flex-row'>
+                                    <div class='chat-receive d-flex flex-row justify-content-center'>
                                         <div class='box-received triangle-received'><span class='msg'>sample messagesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</span></div>
                                         <div class="time-date-received lex-shrink-1">12:00pm 07/12/2022</div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class='chat-receive d-flex flex-row'>
+                                    <div class='chat-receive d-flex flex-row justify-content-center'>
                                         <div class='box-received triangle-received'><span class='msg'>sample message</span></div>
                                         <div class="time-date-received lex-shrink-1">12:00pm 07/12/2022</div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class='chat-send d-flex flex-row'>
+                                    <div class='chat-send d-flex flex-row justify-content-center'>
                                         <div class="time-date-send lex-shrink-1">12:00pm 07/12/2022</div>
                                         <div class='box-sent triangle-sent'><span class='msg'>sample messagse</span></div>
                                     </div>
@@ -197,7 +209,7 @@
                             </div>
                             <div class="text-area-container d-flex p-2 bg-light-blue-2">
                                 <div id="chat">
-                                    <textarea id="text_area" class="form-control"></textarea>
+                                    <textarea onkeyup="textAreaAdjust(this)" id="text_area" class="form-control"></textarea>
                                 </div>
                                 <div class="send-button ms-3 me-3 mt-1">
                                     <button id="send-btn" class="btn btn-danger bg-dark-orange-1"><i class="bi bi-send-fill fs-4 text-white"></i></button>
@@ -336,9 +348,9 @@
                 <div class="desktop-header-card card rounded-0 border-0">Contacts</div>
                 <div class="row w-100 m-0">
                     <div class="col p-0 contacts-list-container bg-light">
-                        <div class="input-group p-3">
+                        <div class="input-group search-input-container p-3">
                             <input type="text" class="form-control" placeholder="Search Contacts">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                            <button class="btn btn-dark" type="button" id="button-addon2">
                                 <i class="bi bi-search"></i>
                             </button>
                         </div>
@@ -380,7 +392,10 @@
                             <button type="button" class="list-group-item list-group-item-action">
                                 <div contacts-data-letters="AJ"> Angelina Jolly</div>
                             </button>
-                            <button type="button" class="list-group-item list-group-item-action active">
+                            <button type="button" class="list-group-item list-group-item-action">
+                                <div contacts-data-letters="AJ"> Angelina Jolly</div>
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">
                                 <div contacts-data-letters="AJ"> Angelina Jolly</div>
                             </button>
                             <button type="button" class="list-group-item list-group-item-action">
@@ -389,7 +404,10 @@
                             <button type="button" class="list-group-item list-group-item-action">
                                 <div contacts-data-letters="AJ"> Angelina Jolly</div>
                             </button>
-                            <button type="button" class="list-group-item list-group-item-action active">
+                            <button type="button" class="list-group-item list-group-item-action">
+                                <div contacts-data-letters="AJ"> Angelina Jolly</div>
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">
                                 <div contacts-data-letters="AJ"> Angelina Jolly</div>
                             </button>
                             <button type="button" class="list-group-item list-group-item-action">
@@ -398,16 +416,10 @@
                             <button type="button" class="list-group-item list-group-item-action">
                                 <div contacts-data-letters="AJ"> Angelina Jolly</div>
                             </button>
-                            <button type="button" class="list-group-item list-group-item-action active">
-                                <div contacts-data-letters="AJ"> Angelina Jolly</div>
-                            </button>
                             <button type="button" class="list-group-item list-group-item-action">
                                 <div contacts-data-letters="AJ"> Angelina Jolly</div>
                             </button>
                             <button type="button" class="list-group-item list-group-item-action">
-                                <div contacts-data-letters="AJ"> Angelina Jolly</div>
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action active">
                                 <div contacts-data-letters="AJ"> Angelina Jolly</div>
                             </button>
                             <button type="button" class="list-group-item list-group-item-action">
@@ -499,6 +511,35 @@
             </div>
         </div>
     </nav>
+
+    <!--Modals-->
+    <!-- Button trigger modal -->
+    <!--button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#incomingCall">Incoming Call</button-->
+  
+    <!-- Modal -->
+    <div class="modal fade" id="incomingCall" tabindex="-1" aria-labelledby="incomingCallLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content incoming-call">
+                <div class="text-center text-white">
+                    <div class="recents-letter mt-5"><b>Aj</b></div>
+                    <h4 class="mt-5"><b>Angelina Jolly</b></h4>
+                    <h5 class="mb-5 mt-5"><b>+63 92716354253</b></h5>
+                    <div class="row mb-5">
+                        <div class="col">
+                            <button class="btn bg-alert-red custom-incoming-call">
+                                <i class="bi bi-telephone-x-fill fs-1 text-white"></i>
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button class="btn bg-success-green custom-incoming-call">
+                                <i class="bi bi-telephone-fill fs-1 text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>

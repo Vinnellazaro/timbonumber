@@ -38,6 +38,7 @@ html, body{
     --warning-yellow:#ffcf00;
     --alert-red:#d02035;
 }
+.bg-red{background-color: var(--red);}
 .bg-dark-orange-1{background-color: var(--dark-orange-1);}
 .bg-light-grey-1{background-color:var(--light-grey-1);}
 .bg-alert-red{background-color: var(--alert-red);}
@@ -119,9 +120,9 @@ body {
         display: flex;
         flex-direction: column-reverse;
     }
-    .inbox-list-container{
-        max-height: 74vh;
-    }
+    /*.inbox-list-container{
+        max-height: 73vh;
+    }*/
     .box-sent, .box-received{
         max-width: 65vw;
     }
@@ -140,6 +141,9 @@ body {
         position: fixed;
         z-index: 100;
         right: 0.3rem;
+    }
+    .message-container .card{
+        height: 63vh;
     }
     
 }
@@ -168,8 +172,15 @@ body {
         right: 0.3rem;
         flex-direction: unset !important;
     }
+    
 }
 /*Desktop View End*/
+
+.search-input-container{
+    position: sticky;
+    top: 0rem;
+    z-index: 5;
+}
 
 .bottom-navbar .nav-link{
     display:inline;
@@ -205,9 +216,9 @@ body {
     font-size: 2rem;
 }
 
-#v-pills-tabContent{
+/*#v-pills-tabContent{
     margin-bottom: 10rem;
-}
+}*/
 
 .delete{
     width: 4rem;
@@ -401,4 +412,11 @@ body {
     width: 2rem;
 }
 
-
+.custom-incoming-call{
+    border-radius: 3rem;
+    width: 5rem;
+    height: 5rem;
+}
+.modal-content.incoming-call{
+background-color: unset !important;
+}

@@ -10,7 +10,10 @@ function dialPad(){
     $("#input-picked").val(picked.toString().replace(/\,/g,''))
   });
 }
-
+function textAreaAdjust(element) {
+  element.style.height = "1px";
+  element.style.height = (25+element.scrollHeight)+"px";
+}
 
 $(function() {
   dialPad();
@@ -20,6 +23,12 @@ $(function() {
   // }else{
   //   $(".bottom-navbar").addClass('fixed-bottom');
   // }
+    var windowPageHeight = $( window ).height();
+    //console.log(windowPageHeight);
+    $(".inbox-list-container").css('height',(windowPageHeight - 233)+'px');
+    $(".message-container").css('height',(windowPageHeight - 308)+'px');
+    $(".recent-list-container").css('height',(windowPageHeight - 222)+'px');
+    $(".contacts-list-container").css('height',(windowPageHeight - 222)+'px')
 //size condition
   if(window.innerWidth < 992){
     
