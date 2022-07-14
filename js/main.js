@@ -1,70 +1,44 @@
 /* DialPad*/
 function dialPad(){
-  let inputPicked = document.getElementById('input-picked');
-  let btns = document.getElementById("btns");
-  let showPicked = document.getElementById("showPicked");
-  let buttonNumbers = [
-    [1],
-    [2],
-    [3],
-    [4],
-    [5],
-    [6],
-    [7],
-    [8],
-    [9],
-    ["*"],
-    [0],
-    ["#"]
-  ];
   let picked = [];
-  let deleteNums = document.getElementById("delete");
-  let call = document.getElementById("call");
-  let end = document.getElementById("end");
-  
-  buttonNumbers.forEach(numbers => {
-    btns.innerHTML += `
-      <button onclick="addNumbers(this.value)"
-      class="btn btn-light custom-button"
-      type="button"
-      value="${numbers[0]}">${numbers[0]}</button>`;
-  });
-  
-  function addNumbers(numbers) {
-    picked.push(numbers);
-    numPicked = picked.toString().replace(/\,/g,'');
-    inputPicked.value = numPicked;
-  }
-  
-  deleteNums.addEventListener("click", () => {
+  $( "#delete" ).click(function() {
     picked.pop();
-    numPicked = picked.toString().replace(/\,/g,'');
-    inputPicked.value = numPicked;
+    $("#input-picked").val(picked.toString().replace(/\,/g,''))
+  });
+  $(".custom-button-call").click(function() {
+    picked.push($(this).val())
+    $("#input-picked").val(picked.toString().replace(/\,/g,''))
   });
 }
 
 
-$(document).ready(function() {
+$(function() {
   dialPad();
+
+  // if(document.getElementById('v-pills-home-tab').classList.contains('active')){
+  //   $(".bottom-navbar").removeClass('fixed-bottom');
+  // }else{
+  //   $(".bottom-navbar").addClass('fixed-bottom');
+  // }
 //size condition
   if(window.innerWidth < 992){
     
     //Phone view--------------------------------------------------->
-     $(".box-sent").css('max-width','65vw');
-     $(".box-received").css('max-width','65vw');
+     //$(".box-sent").css('max-width','65vw');
+     //$(".box-received").css('max-width','65vw');
 
     //when phone view home tab active
     $("#v-pills-home-tab").trigger('click');
-    //var homeContainer = document.getElementById('v-pills-home').classList.contains('active');
+
 
     //backmessage show
     $(".message-back-btn").removeClass("d-none");
     $(".recents-back-btn").removeClass("d-none");
     $(".contacts-back-btn").removeClass("d-none");
-    $(".recent-list-container").css('max-height','100vh');
-    $(".contacts-list-container").css('max-height','100vh');
-    $(".inbox-list-container").css('max-height','100vh');
-    $(".chat-container").css('max-height','50vh');
+    //$(".recent-list-container").css('max-height','100vh');
+    //$(".contacts-list-container").css('max-height','100vh');
+    //$(".inbox-list-container").css('max-height','100vh');
+    //$(".chat-container").css('max-height','50vh');
 
     //hide welcome message and status when bottom nav clicked
     $("#v-pills-home-tab").click(function(){
@@ -122,11 +96,11 @@ $(document).ready(function() {
     $(".write-message-btn").hide();
     $(".mobile-number-top").hide();
 
-    $(".box-sent").css('max-width','40vw');
-    $(".box-received").css('max-width','40vw');
-    $(".inbox-list-container").css('max-height','60vh');
-    $(".recent-list-container").css('max-height','60vh');
-    $(".contacts-list-container").css('max-height','60vh');
+    //$(".box-sent").css('max-width','40vw');
+    //$(".box-received").css('max-width','40vw');
+    // $(".inbox-list-container").css('max-height','60vh');
+    // $(".recent-list-container").css('max-height','60vh');
+    // $(".contacts-list-container").css('max-height','60vh');
 
     //set ".chat-container" equal to ".inbox-list-container"
     let inboxListContainerHeight = $(".inbox-list-container").height();
