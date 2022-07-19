@@ -4,11 +4,19 @@ function dialPad(){
   $( "#delete" ).click(function() {
     picked.pop();
     $("#input-picked").val(picked.toString().replace(/\,/g,''))
+    if(picked.length == 0){
+      $(".add-number-container").addClass('d-none');
+    }
   });
   $(".custom-button-call").click(function() {
     picked.push($(this).val())
     $("#input-picked").val(picked.toString().replace(/\,/g,''))
+    if(picked.length > 0){
+      $(".add-number-container").removeClass('d-none');
+    }
   });
+  console.log(picked.length)
+  
 }
 function textAreaAdjust(element) {
   element.style.height = "1px";

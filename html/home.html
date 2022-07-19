@@ -132,7 +132,7 @@
         <div class="tab-content w-100" id="v-pills-tabContent">
             <div class="tab-pane fade" id="v-pills-inbox" role="tabpanel" aria-labelledby="v-pills-inbox-tab" tabindex="0">
                 <div class="desktop-header-card card rounded-0 border-0">
-                    <h2 class="m-0">Inbox <button class="btn float-end write-message-btn"><i class="bi bi-pencil-square text-white fs-4"></i></button></i></h2>
+                    <h2 class="m-0">Inbox <button class="btn float-end write-message-btn"><i class="bi bi-pencil-square text-white fs-4"></i></button></h2>
                 </div>
                 <div class="row inbox-container w-100 m-0">
                     <div class="col p-0 inbox-list-container bg-light">
@@ -228,6 +228,7 @@
                     <div class="input-picked-container input-group input-group-lg m-auto">
                         <input id="input-picked" type="text" class="form-control text-center shadow">
                     </div>
+                    <div class="text-center add-number-container d-none"><button class="btn" data-bs-toggle="modal" data-bs-target="#addContactModal">Add Number</button></div>
                     <div class="container mt-2">
                         <div class="row justify-content-center">
                             <div class="phone">
@@ -345,7 +346,7 @@
             </div>
             <div class="tab-pane fade" id="v-pills-contacts" role="tabpanel" aria-labelledby="v-pills-contacts-tab"
                 tabindex="0">
-                <div class="desktop-header-card card rounded-0 border-0">Contacts</div>
+                <div class="desktop-header-card card rounded-0 border-0"><h2><span>Contacts</span> <button class="btn btn-sm float-end pt-0 pb-0" data-bs-toggle="modal" data-bs-target="#addContactModal"><i class="bi bi-telephone-plus-fill fs-4 text-white"></i></button></h2></div>
                 <div class="row w-100 m-0">
                     <div class="col p-0 contacts-list-container bg-light">
                         <div class="input-group search-input-container p-3">
@@ -540,6 +541,33 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="addContactModal" tabindex="-1" aria-labelledby="addContactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addContactModal">New Contact</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="First Name">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Last Name">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" placeholder="Number">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary float-start me-auto" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
