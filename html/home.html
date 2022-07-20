@@ -111,9 +111,12 @@
     <!--Side Nav tab Content inside-->
     <div class="side-nav d-flex align-items-start">
         <div class="nav flex-column nav-pills bg-light-blue-3" role="tablist" aria-orientation="vertical">
-            <button id="side-nav-inbox" class="nav-link rounded-0 p-4" data-bs-toggle="pill" type="button">
+            <button id="side-nav-inbox" class="nav-link rounded-0 p-4 position-relative" data-bs-toggle="pill" type="button">
                 <img class="bottom-button-img" src="../img/Message.png">
                 <h6>Inbox</h6>
+                <span class="inbox-notif-num position-absolute top-0 translate-middle badge rounded-pill bg-danger">99+</span>
+                <!--Dot version below-->
+                <!--span class="position-absolute top-0 translate-middle p-2 badge rounded-pill text-bg-danger">New Message</span-->
             </button>
             <button id="side-nav-dialpad" class="nav-link rounded-0 p-4" data-bs-toggle="pill" type="button">
                 <img class="bottom-button-img" src="../img/Keypad.png">
@@ -225,8 +228,23 @@
                 <div class="container pt-5">
                     <!-- Phone -->
                     <!--div id="showPicked" class="text-center mt-5"></div-->
-                    <div class="input-picked-container input-group input-group-lg m-auto">
-                        <input id="input-picked" type="text" class="form-control text-center shadow">
+                    <!--div class="btn-group dropup">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropup
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Action two</a></li>
+                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                          </ul>
+                      </div-->
+                    <div class="input-picked-container input-group input-group-lg m-auto dropup dropup-center">
+                        <input id="input-picked" type="text" class="form-control text-center shadow dropdown-toggle" data-bs-toggle="dropdown">
+                        <ul class="dropdown-menu suggested-contact" data-popper="top" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(80px, -68px, 0px);">
+                            <li><button class="dropdown-item border-bottom"><span class="suggested-name fs-6">Name</span><br><span class="suggested-number fw-bold">091228394756</span></button></li>
+                            <li><button class="dropdown-item border-bottom"><span class="suggested-name">Name</span><br><span class="suggested-number fw-bold">091228394756</span></button></li>
+                            <li><button class="dropdown-item border-bottom"><span class="suggested-name">Name</span><br><span class="suggested-number fw-bold">091228394756</span></button></li>
+                        </ul>
                     </div>
                     <div class="text-center add-number-container d-none"><button class="btn" data-bs-toggle="modal" data-bs-target="#addContactModal">Add Number</button></div>
                     <div class="container mt-2">
@@ -468,11 +486,14 @@
             <div class="nav flex-column nav-pills bg-light-blue-3" id="v-pills-tab">
                 <div class="row text-center">
                     <div class="col p-0">
-                        <button class="nav-link rounded-0 p-2" id="v-pills-inbox-tab" data-bs-toggle="pill"
+                        <button class="nav-link rounded-0 p-2 position-relative" id="v-pills-inbox-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-inbox" type="button" role="tab" aria-controls="v-pills-inbox"
                             aria-selected="false">
                             <img class="bottom-button-img" src="../img/Message.png">
                             <h6>Inbox</h6>
+                            <span class="inbox-notif-num position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
+                            <!--Dot version below-->
+                            <!--span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"></span-->
                         </button>
                     </div>
                     <div class="col p-0">

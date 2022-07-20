@@ -421,3 +421,10 @@ body {
 .modal-content.incoming-call{
 background-color: unset !important;
 }
+
+.suggested-contact{
+    position: absolute;
+    inset: auto auto 0px 0px;
+    margin: 0px;
+    transform: translate3d(80px, -68px, 0px);
+}

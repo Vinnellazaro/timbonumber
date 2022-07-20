@@ -6,6 +6,8 @@ function dialPad(){
     $("#input-picked").val(picked.toString().replace(/\,/g,''))
     if(picked.length == 0){
       $(".add-number-container").addClass('d-none');
+    //  $(".dropdown-toggle").removeClass('show');
+      $(".suggested-contact").removeClass('show');
     }
   });
   $(".custom-button-call").click(function() {
@@ -13,7 +15,10 @@ function dialPad(){
     $("#input-picked").val(picked.toString().replace(/\,/g,''))
     if(picked.length > 0){
       $(".add-number-container").removeClass('d-none');
+      //$("#input-picked").addClass('show');
+      $(".suggested-contact").addClass('show');
     }
+   
   });
   console.log(picked.length)
   
