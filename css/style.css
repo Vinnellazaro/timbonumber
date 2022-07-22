@@ -428,3 +428,6 @@ background-color: unset !important;
     margin: 0px;
     transform: translate3d(80px, -68px, 0px);
 }
+.welcome-message-logo{
+    width: 5rem;
+}
